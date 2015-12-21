@@ -1,0 +1,15 @@
+{
+  "name": "corporify-ui-package",
+  "version": "0.0.1",
+  "homepage": "www.cloudoki.com",
+  "authors": [
+    "Rui Molefas <molefas@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

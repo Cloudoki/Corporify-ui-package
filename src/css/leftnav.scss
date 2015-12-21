@@ -1,0 +1,29 @@
+.leftnav {
+	height: 100%;
+	background-color: #36474f;
+	float: left;
+	padding-top: 60px;
+	max-width: 90px;
+
+	.leftnav-item {
+		padding: 10px;
+		color: $light-color;
+		text-transform: uppercase;
+		text-align: center;
+
+		> i {
+			font-size: 2em;
+		}
+
+		.item-name {
+			font-size: .7em;
+			font-weight: 500;
+		}
+
+		&:hover {
+			background-color: $dark-color;
+			color: $light-grey;
+			cursor: pointer;
+		}
+	}
+}

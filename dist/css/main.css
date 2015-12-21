@@ -1,0 +1,60 @@
+/* main scss file */
+/* Variables */
+html {
+  height: 100%; }
+  html body {
+    font-size: 14px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f1f1f1; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style: none; }
+
+header nav.navbar {
+  background-color: #465a65;
+  min-height: 60px;
+  padding-right: 15px;
+  border: none;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1); }
+  header nav.navbar .navbar-brand {
+    padding: 10px 15px; }
+  header nav.navbar .navbar-right .navbar-icon {
+    font-size: 1.5em;
+    padding: 15px 18px;
+    color: #90a4af; }
+  header nav.navbar .navbar-right > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #90a4af; }
+  header nav.navbar .navbar-right > li:hover {
+    background-color: #273238;
+    color: #ddd;
+    cursor: pointer; }
+    header nav.navbar .navbar-right > li:hover > a {
+      color: #ddd; }
+
+.leftnav {
+  height: 100%;
+  background-color: #36474f;
+  float: left;
+  padding-top: 60px;
+  max-width: 90px; }
+  .leftnav .leftnav-item {
+    padding: 10px;
+    color: #90a4af;
+    text-transform: uppercase;
+    text-align: center; }
+    .leftnav .leftnav-item > i {
+      font-size: 2em; }
+    .leftnav .leftnav-item .item-name {
+      font-size: .7em;
+      font-weight: 500; }
+    .leftnav .leftnav-item:hover {
+      background-color: #273238;
+      color: #ddd;
+      cursor: pointer; }

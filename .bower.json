@@ -1,0 +1,22 @@
+{
+  "name": "corporify-ui-package",
+  "homepage": "www.cloudoki.com",
+  "authors": [
+    "Rui Molefas <molefas@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "devDependencies": {},
+  "_release": "70308e1ab8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "70308e1ab8c9c8152add731da21d259cd97fe939"
+  },
+  "_source": "https://github.com/Cloudoki/Corporify-ui-package.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Cloudoki/Corporify-ui-package.git",
+  "_direct": true
+}

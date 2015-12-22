@@ -34,20 +34,24 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      
 		      	<ul class="nav navbar-nav navbar-right">
-			        <li class="dropdown">
+		      		 <li class="navbar-icon">
+		      			<i class="glyphicon glyphicon-search"></i>
+		      		</li>		        <li class="dropdown">
 			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 			          		Rui Molefas <span class="caret"></span>
 			          	</a>
 			          	<ul class="dropdown-menu user-menu">
 			          		<i class="fa fa-caret-up"></i>
 				            <li><a href="#profile">Profile</a></li>
+				            <li><a href="#logout">Logout</a></li>
 			          	</ul>
 			        </li>
 			         <li class="navbar-icon">
 			        	<i class="icon-ios-bell"></i>
 			        </li>		         <li class="navbar-icon">
 			        	<i class="icon-ios-alarm"></i>
-			        </li>	      	</ul>
+			        </li>
+		      	</ul>
 		    </div>
 	  	</div>
 	</nav></header>
@@ -82,7 +86,109 @@
 			<div class="item-name">Admin</div>
 		</li>
 	</ul>
-</div>dashboard
+</div><div class="content-wrapper" style="margin-top: 4%;margin-left: 100px;">
+        <section class="content">
+			<div class="row">
+				<div class="col-sm-6 panel">
+									<table class="table">
+									    <tbody>
+									      <tr>
+									        <th style="color: #5F9F9F;">Identities / Natural Persons<br></th>
+										    <th rowspan="2">
+										    	<div class="form-group">
+												  <input type="text" class="form-control" placeholder="Search">
+												</div>
+										    </th>
+										    <th rowspan="2">
+										    	<div class="form-group">
+												  <select class="form-control" id="sel1">
+												    <option>All</option>
+												    <option>2</option>
+												    <option>3</option>
+												    <option>4</option>
+												  </select>
+												</div>
+										    </th>
+										    <th rowspan="2">
+										    	<button type="button" class="btn btn-primary">+</button>
+										    </th>
+									      </tr>
+									      <tr>
+									        <td>5 results found</td>
+									      </tr>
+									    </tbody>
+									   </table>
+				
+									  <table class="table">
+									    <thead>
+									      <tr>
+									        <th><span></span></th>
+									        <th><span>Name</span></th>
+									        <th><span>Enterprise</span></th>
+									        <th><span>Country</span></th>
+									        <th><span>Legal Form</span></th>
+									        <th><span>Location</span></th>
+									      </tr>
+									    </thead>
+									    <tbody>
+									      <tr>
+									        <td class="lalign">+</td>
+									        <td>Corporify</td>
+									        <td>00000010</td>
+									        <td>Belgium</td>
+									        <td>CVBA</td>
+									        <td>9255 Opstal</td>
+									      </tr>
+									      <tr>
+									        <td class="lalign">+</td>
+									        <td>Corporify</td>
+									        <td>00000001</td>
+									        <td>Belgium</td>
+									        <td>CVBA</td>
+									        <td>255 Opstal</td>
+									      </tr>
+									    </tbody>
+									  </table>
+				</div>
+				<div class="col-sm-6 panel">
+									<table class="table">
+									    <tbody>
+									      <tr>
+									        <th style="color: #5F9F9F;">Upcoming Reminders<br></th>
+									      </tr>
+									      <tr>
+									        <td>3 reminders</td>
+									      </tr>
+									    </tbody>
+									   </table>
+				
+									  <table class="table">
+									    <thead>
+									      <tr>
+									        <th><span></span></th>
+									        <th><span>Name</span></th>
+									        <th><span>Due Date</span></th>
+									        <th><span>Alert Date</span></th>
+									        <th><span>Status</span></th>
+									        <th><span>Type</span></th>
+									        <th><span>SubType</span></th>
+									      </tr>
+									    </thead>
+									    <tbody>
+									      <tr>
+									        <td class="lalign">+</td>
+									        <td>ColibraNV</td>
+									        <td>22/11/2015</td>
+									        <td>25/12/2015</td>
+									        <td>Open</td>
+									        <td>Mandate</td>
+									        <td>Board Of...</td>
+									      </tr>
+									    </tbody>
+									  </table>
+				</div>			</div> 
+		  </section>
+      </div>      
 </body>
 
 <!-- Add vendor scripts here -->

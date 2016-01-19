@@ -1,0 +1,265 @@
+.cp-panel {
+
+	border-radius: 2px;
+	box-shadow: none;
+	border: none;
+	background-color: #fff;
+
+	.cp-panel-header {
+		padding: 30px;
+		border-bottom: 1px solid #eee;
+
+		h3 {
+			margin: 0;
+			font-size: 1.1em;
+			font-weight: 600;
+			color: $main-color;
+		}
+
+		.subtitle {
+			color: #999;
+			font-size: .8em;
+			position: relative;
+			top: 3px;
+			margin-bottom: -5px;
+		}
+
+		.cp-actions {
+
+			input,
+			.dropdown,
+			.cp-btn {			
+				max-width: 150px;
+				margin-left: 10px;
+				margin-bottom: -10px;
+				margin-top: -10px;
+
+				&:last-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.cp-panel-content {
+		padding: 30px;
+		overflow: auto; 
+		
+		&.table {
+			padding: 0;
+
+			table {
+				font-size: .8em;
+
+				> thead {
+					> tr {
+						> th {
+							background-color: #fff;
+							padding: 12px 5px;
+							text-align: left;
+							border-bottom: 1px solid #eee;
+
+							> a {
+								color: #333;
+							}
+
+							&:first-child {
+								padding-left: 30px;
+							}
+
+							&:last-child {
+								padding-right: 30px;
+							}
+						}
+					}
+				}
+
+				> tbody {
+					> tr {
+						> td {
+							padding: 6px 5px;
+							border-bottom: 1px solid #eee;
+
+							&:first-child {
+								padding-left: 30px;
+							}
+
+							&:last-child {
+								padding-right: 30px;
+							}
+						}
+
+						&:last-child {
+							> td {
+								border-bottom: 0;
+								padding-bottom: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.note {
+			border-bottom: 1px solid #eee;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+
+			.note-title {
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			p {
+				color: #777;
+			}
+
+			.note-meta {
+				color: #bbb;
+				font-size: .8em;
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+				margin-bottom: 0;
+				border-bottom: none;
+			}
+		}
+
+		.attachment {
+			position: relative;
+			padding-left: 30px;
+			border-bottom: 1px solid #eee;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+
+			.row {
+				> span {
+					position: absolute;
+					left: 0;
+					top: 4px;
+				}
+			}
+
+			.att-meta {
+				font-size: .8em;
+				color: #777;
+
+				&.date {
+					color: #bbb;
+				}
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+				margin-bottom: 0;
+				border-bottom: none;
+			}
+		}
+
+		.drop-zone {
+			border: 2px dashed #ccc;
+			padding: 30px;
+			border-radius: 4px;
+			text-align: center;
+			font-size: .9em;
+			color: #bbb;
+		}
+	}
+
+	&.tabbed {
+		.nav-tabs {
+			border-bottom: 1px solid #eee;
+			background-color: #f8f8f8;
+
+			> li {
+				> a {
+					padding: 20px 30px;
+					margin-right: 0;
+					border-radius: 0;
+					font-size: 1.2em;
+					font-weight: 600;
+					color: $grey;
+					text-decoration: none;
+				}
+
+				&.active {
+					> a {
+						border-top: none;
+						border-right: 1px solid #eee;
+						border-left: 1px solid #eee;
+						border-bottom: 2px solid transparent;
+						color: $main-color;
+					}
+					&:first-child {
+						> a {
+							border-left: none;
+						}
+					}
+				}
+			}
+		}
+
+		.cp-panel-header {
+			padding: 20px 30px;
+		}
+	}
+}
+
+.cp-btn {
+	padding: 6px 12px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	color: #ccc;
+
+	&:hover {
+		cursor: pointer;
+		color: #bbb;
+		border: 1px solid #bbb;
+	}
+}
+
+table {
+	&.cp-panel {
+		font-size: .9em;
+
+		thead {
+			th {
+				padding: 30px 5px;
+				border-bottom: 1px solid #eee;
+
+				&:first-child { padding-left: 30px;}
+				&:last-child { padding-right: 30px;}
+			}
+		}
+
+		tbody {
+
+			tr {
+				td {
+					padding: 5px 5px;
+
+					&:first-child { padding-left: 30px;}
+					&:last-child { padding-right: 30px;}
+				}
+
+				&:first-child {
+					td { padding-top: 30px; }
+				}
+
+				&:last-child {
+					td { padding-bottom: 30px; }
+				}
+			}
+		}
+	}
+}
+
+.drop-area {
+	text-align: center;
+	border-radius: 5px;
+	border: 2px  dashed #ccc;
+	padding: 30px;
+	font-size: .9em;
+	color: #ccc;
+}

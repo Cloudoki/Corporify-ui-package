@@ -44,7 +44,10 @@ gulp.task('copy:images', function() {
 gulp.task('copy:scripts', function() {
     return gulp.src([
             dirs.source+'/vendor/jquery/dist/jquery.min.js', 
-            dirs.source+'/vendor/bootstrap/dist/css/bootstrap.min.css'
+            dirs.source+'/vendor/bootstrap/dist/css/bootstrap.min.css',
+            dirs.source+'/vendor/bootstrap/dist/js/bootstrap.min.js',
+            dirs.source+'/vendor/chosen/chosen.jquery.min.js',
+            dirs.source+'/vendor/chosen/chosen.min.css'
         ]).pipe(copy(dirs.release, {prefix: 1}));
 });
 

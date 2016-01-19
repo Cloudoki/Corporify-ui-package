@@ -9,10 +9,10 @@
 	<title>Corporify - UI Package</title>
 	
 	<link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/0bf60f4e2f/Corporify/style.css">
+	<link rel="stylesheet" href="/vendor/chosen/chosen.min.css">
+	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/2d877bf296/Corporify/style.css">
 	<link rel="stylesheet" href="/css/main.css">
-	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -35,7 +35,7 @@
 		      
 		      	<ul class="nav navbar-nav navbar-right">
 		      		 <li class="navbar-icon">
-		      			<i class="glyphicon glyphicon-search"></i>
+		      			<i class="icon-search"></i>
 		      		</li>		        <li class="dropdown">
 			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 			          		Rui Molefas <span class="caret"></span>
@@ -86,114 +86,222 @@
 			<div class="item-name">Admin</div>
 		</li>
 	</ul>
-</div><div class="content-wrapper" style="margin-top: 4%;margin-left: 100px;">
-        <section class="content">
-			<div class="row">
-				<div class="col-sm-6 panel">
-									<table class="table">
-									    <tbody>
-									      <tr>
-									        <th style="color: #5F9F9F;">Identities / Natural Persons<br></th>
-										    <th rowspan="2">
-										    	<div class="form-group">
-												  <input type="text" class="form-control" placeholder="Search">
-												</div>
-										    </th>
-										    <th rowspan="2">
-										    	<div class="form-group">
-												  <select class="form-control" id="sel1">
-												    <option>All</option>
-												    <option>2</option>
-												    <option>3</option>
-												    <option>4</option>
-												  </select>
-												</div>
-										    </th>
-										    <th rowspan="2">
-										    	<button type="button" class="btn btn-primary">+</button>
-										    </th>
-									      </tr>
-									      <tr>
-									        <td>5 results found</td>
-									      </tr>
-									    </tbody>
-									   </table>
-				
-									  <table class="table">
-									    <thead>
-									      <tr>
-									        <th><span></span></th>
-									        <th><span>Name</span></th>
-									        <th><span>Enterprise</span></th>
-									        <th><span>Country</span></th>
-									        <th><span>Legal Form</span></th>
-									        <th><span>Location</span></th>
-									      </tr>
-									    </thead>
-									    <tbody>
-									      <tr>
-									        <td class="lalign">+</td>
-									        <td>Corporify</td>
-									        <td>00000010</td>
-									        <td>Belgium</td>
-									        <td>CVBA</td>
-									        <td>9255 Opstal</td>
-									      </tr>
-									      <tr>
-									        <td class="lalign">+</td>
-									        <td>Corporify</td>
-									        <td>00000001</td>
-									        <td>Belgium</td>
-									        <td>CVBA</td>
-									        <td>255 Opstal</td>
-									      </tr>
-									    </tbody>
-									  </table>
+</div><div class="bread-nav">
+	<div class="bread-nav-nav">
+		<div class="nav-back nav-btn"><</div>
+		<div class="nav-forward nav-btn">></div>
+	</div>
+	<div class="breadcrumbs">
+		<a href="#">person</a>
+		<a href="#">person</a>
+		<span>asd</span>
+	</div>
+</div><section class="main-content">
+	<div class="inside menued">
+		<!-- <div class="row">
+			<div class="col-sm-6">
+				<div class="cp-panel">
+					<div class="cp-panel-header">
+						<div class="row">
+							<div class="col-sm-5">
+								<h3>Identities / Natural Persons</h3>
+								<div class="subtitle">5 results found</div>
+							</div>
+							<div class="col-sm-7 cp-actions">
+								<div class="cp-btn pull-right">
+									<span class="icon-plus"></span>
+								</div>
+								<div class="input-group iconed pull-right">
+									<input type="text" class="form-control" placeholder="search">
+									<i class="icon-search"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cp-panel-content table"></div>
+				</div>			</div>
+			<div class="col-sm-6">
+				<div class="cp-panel">
+					<div class="cp-panel-header">
+						<div class="row">
+							<div class="col-sm-5">
+								<h3>Upcoming Reminders</h3>
+								<div class="subtitle">3 reminders</div>
+							</div>
+							<div class="col-sm-7 cp-actions">
+								<div class="cp-btn pull-right">
+									<span class="icon-plus"></span>
+								</div>
+								<div class="input-group iconed pull-right">
+									<input type="text" class="form-control" placeholder="search">
+									<i class="icon-search"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cp-panel-content table"></div>
+				</div>			</div>
+		</div> -->
+		<div class="cp-panel tabbed">
+			<ul class="nav nav-tabs">
+	  			<li role="presentation" class="active"><a href="#">Home</a></li>
+	  			<li role="presentation"><a href="#">Profile</a></li>
+	  			<li role="presentation"><a href="#">Messages</a></li>
+			</ul>
+			<div class="tab-content cp-panel">
+			    <div role="tabpanel" class="tab-pane active" id="home">
+			    	<div class="cp-panel-header">
+			    		<div class="input-group iconed">
+							<input type="text" class="form-control" placeholder="search">
+							<i class="icon-search"></i>
+						</div>
+			    	</div>
+			    	<div class="cp-panel-content"></div>
+			    </div>
+			    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+			    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+			    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="cp-panel notes-panel">
+					<div class="cp-panel-header">
+						<div class="row">
+							<div class="col-xs-6">
+								<h3>Notes</h3>
+							</div>
+							<div class="col-xs-6 cp-actions">
+								<div class="cp-btn pull-right">
+									<span class="icon-plus"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cp-panel-content">
+						<div class="note">
+							<div class="note-title">Note 1</div>
+							<p class="note-content">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium urna in purus venenatis, eget placerat quam convallis. Cras hendrerit sem eros, a tincidunt dolor sollicitudin ac. Vivamus eget porta dui. 
+							</p>
+							<div class="note-meta">by Rui Molefas, 01/12/2015</div>
+						</div>
+						<div class="note">
+							<div class="note-title">Note 1</div>
+							<p class="note-content">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium urna in purus venenatis, eget placerat quam convallis. Cras hendrerit sem eros, a tincidunt dolor sollicitudin ac. Vivamus eget porta dui. 
+							</p>
+							<div class="note-meta">by Rui Molefas, 01/12/2015</div>
+						</div>
+					</div>
 				</div>
-				<div class="col-sm-6 panel">
-									<table class="table">
-									    <tbody>
-									      <tr>
-									        <th style="color: #5F9F9F;">Upcoming Reminders<br></th>
-									      </tr>
-									      <tr>
-									        <td>3 reminders</td>
-									      </tr>
-									    </tbody>
-									   </table>
-				
-									  <table class="table">
-									    <thead>
-									      <tr>
-									        <th><span></span></th>
-									        <th><span>Name</span></th>
-									        <th><span>Due Date</span></th>
-									        <th><span>Alert Date</span></th>
-									        <th><span>Status</span></th>
-									        <th><span>Type</span></th>
-									        <th><span>SubType</span></th>
-									      </tr>
-									    </thead>
-									    <tbody>
-									      <tr>
-									        <td class="lalign">+</td>
-									        <td>ColibraNV</td>
-									        <td>22/11/2015</td>
-									        <td>25/12/2015</td>
-									        <td>Open</td>
-									        <td>Mandate</td>
-									        <td>Board Of...</td>
-									      </tr>
-									    </tbody>
-									  </table>
-				</div>			</div> 
-		  </section>
-      </div>      
+			</div>
+			<div class="col-sm-6">
+				<div class="cp-panel">
+					<div class="cp-panel-header">
+						<h3>Attachments</h3>
+					</div>
+					<div class="cp-panel-content">
+						<div class="attachment">
+							<div class="row">
+								<span class="icon-image"></span>
+								<div class="col-xs-3">
+									<a class="att-name" href="#">idcard.jpg</a>
+								</div>
+								<div class="col-xs-4">
+									<select class="chosen-select">
+										<option value="1">Value</option>
+									</select>
+								</div>
+								<div class="col-xs-5">
+									<div class="att-meta date">Added: 21/12/2015</div>
+									<div class="att-meta">Metadata text, free to add.</div>
+								</div>
+							</div>
+						</div>
+						<div class="attachment">
+							<div class="row">
+								<span class="icon-image"></span>
+								<div class="col-xs-3">
+									<a class="att-name" href="#">idcard.jpg</a>
+								</div>
+								<div class="col-xs-4">
+									<select class="chosen-select">
+										<option value="1">Value</option>
+									</select>
+								</div>
+								<div class="col-xs-5">
+									<div class="att-meta date">Added: 21/12/2015</div>
+									<div class="att-meta">Metadata text, free to add.</div>
+								</div>
+							</div>
+						</div>
+						<div class="drop-zone">Click or drop items to upload</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="context-menu person-menu">
+		<div class="context-menu-header">
+			<div class="title">Evelyn De Both</div>
+			<div class="context-tags">
+				<span>Tags:</span>
+				<span class="tags">important, CEO</span>
+			</div>
+		</div>
+		<div class="context-menu-content">
+			<div class="category">
+				<div class="category-title">General coordinates</div>
+				<div class="category-field">
+					<div class="category-field-name">Title:</div>
+					<div class="category-field-value">Duchess</div>	
+				</div>
+				<div class="category-field">
+					<div class="category-field-name">First name:</div>
+					<div class="category-field-value">Evelyn</div>	
+				</div>
+				<div class="category-field">
+					<div class="category-field-name">Middle names:</div>
+					<div class="category-field-value">Lumpy Space</div>	
+				</div>
+				<div class="category-field">
+					<div class="category-field-name">Last name:</div>
+					<div class="category-field-value">De Both</div>	
+				</div>
+				<div class="category-field">
+					<div class="category-field-name">Gender:</div>
+					<div class="category-field-value">Female</div>	
+				</div>
+				<div class="category-field">
+					<div class="category-field-name">Language:</div>
+					<div class="category-field-value">Dutch</div>	
+				</div>
+				<div class="category-field">
+					<div class="category-field-name">Nationality:</div>
+					<div class="category-field-value">Belgium</div>	
+				</div>
+				<div class="category-field">
+					<div class="category-field-name">VAT:</div>
+					<div class="category-field-value">BE000000000</div>	
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+      
 </body>
 
 <!-- Add vendor scripts here -->
 <!-- Example -->
-<!-- <script src="vendor/jquery/dist/jquery.min.js"></script> -->
+<script src="/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/vendor/chosen/chosen.jquery.min.js"></script>
 
 <!-- Concatenated main script -->
 <script src="/js/built.js"></script> 

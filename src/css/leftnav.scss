@@ -1,18 +1,24 @@
 .leftnav {
 	height: 100%;
 	background-color: #36474f;
-	float: left;
-	padding-top: 60px;
+	position: absolute;
+	left: 0;
+	min-width: 85px;
 	max-width: 90px;
+	z-index: 100;
 
 	.leftnav-item {
-		padding: 10px;
-		color: $light-color;
-		text-transform: uppercase;
-		text-align: center;
+		> a {
+			display: block;
+			padding: 10px;
+			color: $light-color;
+			text-transform: uppercase;
+			text-align: center;
+			text-decoration: none;
 
-		> i {
-			font-size: 2em;
+			> i {
+				font-size: 2em;
+			}	
 		}
 
 		.item-name {
@@ -21,9 +27,23 @@
 		}
 
 		&:hover {
-			background-color: $dark-color;
-			color: $light-grey;
-			cursor: pointer;
+			> a {
+				background-color: $dark-color;
+				color: $light-grey;
+				cursor: pointer;
+			}
 		}
+	}
+
+	&.dashboard .leftnav-item.dashboard a,
+	&.persons .leftnav-item.persons a,
+	&.identities .leftnav-item.identities a,
+	&.reminders .leftnav-item.reminders a,
+	&.documents .leftnav-item.documents a,
+	&.notes .leftnav-item.notes a,
+	&.admin .leftnav-item.admin a {
+		background-color: $dark-color;
+		color: #fff;
+		cursor: pointer;
 	}
 }

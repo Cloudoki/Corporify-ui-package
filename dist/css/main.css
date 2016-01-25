@@ -132,21 +132,24 @@ input {
     .input-group.iconed input {
       padding-right: 40px; }
 
-.chosen-container > .chosen-single {
+.chosen-container-single > .chosen-single {
   border-radius: 2px;
   box-shadow: none;
   background: #fff;
   border: 1px solid #ccc;
   padding: 6px 12px;
   position: relative;
-  bottom: 7px;
   height: 34px;
-  font-size: .9em; }
+  font-size: .9em;
+  line-height: 18px;
+  color: #999; }
+  .chosen-container-single > .chosen-single > div > b {
+    background-position-y: 5px; }
 
-.chosen-container.chosen-container-active > .chosen-single {
+.chosen-container-single.chosen-container-active > .chosen-single {
   background: #fff; }
 
-.chosen-container.chosen-container-active > .chosen-drop {
+.chosen-container-single.chosen-container-active > .chosen-drop {
   margin-top: -7px;
   border-radius: 2px;
   border-top-left-radius: 0;
@@ -285,16 +288,12 @@ header {
       position: relative;
       top: 3px;
       margin-bottom: -5px; }
-    .cp-panel .cp-panel-header .cp-actions input,
-    .cp-panel .cp-panel-header .cp-actions .dropdown,
-    .cp-panel .cp-panel-header .cp-actions .cp-btn {
+    .cp-panel .cp-panel-header .cp-actions .input-group {
       max-width: 150px;
-      margin-left: 10px;
-      margin-bottom: -10px;
-      margin-top: -10px; }
-      .cp-panel .cp-panel-header .cp-actions input:last-child,
-      .cp-panel .cp-panel-header .cp-actions .dropdown:last-child,
-      .cp-panel .cp-panel-header .cp-actions .cp-btn:last-child {
+      display: inline-block;
+      max-width: 150px;
+      margin-left: 10px; }
+      .cp-panel .cp-panel-header .cp-actions .input-group:first-child {
         margin-left: 0; }
   .cp-panel .cp-panel-content {
     padding: 30px;

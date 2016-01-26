@@ -1,0 +1,83 @@
+section.notifications {
+	background-color: #fff;
+	border-left: 1px solid #bcbbc6;
+	padding: 30px 20px 0 0;
+
+	.cp-notification {
+		position: relative;
+		padding-left: 35px;
+		min-height: 50px;
+
+		.cp-notification-state {
+			position: absolute;
+			left: 10px;
+			top:0;
+
+			&.unread::before {
+			    content: "\25CF";
+			    color: #eaeaea;
+			    font-size: 1.7em;
+			}
+		}
+
+		.cp-notification-content {
+			position: relative;
+			padding-left: 55px;
+
+			.cp-notification-type {
+				position: absolute;
+				left: 0;
+				width: 35px;
+				height: 35px;
+				border-radius: 100%;
+				background-color: #eee;
+				text-align: center;
+
+				.cp-notification-context {
+					font-family: 'icomoon' !important;
+				    speak: none;
+				    font-style: normal;
+				    font-weight: normal;
+				    font-variant: normal;
+				    text-transform: none;
+				    line-height: 32px;
+				    font-size: 1.2em;
+
+				    &.document:before {
+						content: "\e910";
+				    }
+				    &.user:before {
+						content: "\e906";
+				    }
+				}
+
+				&.info {
+					background-color: #dff7fa;
+					color: #00bcd6;
+				}
+				&.danger {
+					background-color: #fee0dc;
+					color: #e81716;
+				}
+				&.warning {
+					background-color: #dff7fa;
+					color: #00bcd6;
+				}
+				&.success {
+					background-color: #f1f9e9;
+					color: #89c440;
+				}
+			}
+
+			.cp-notification-text {
+				padding: 6px 0;
+				font-size: .9em;
+
+				.meta {
+					font-size: .8em;
+					color: #999;
+				}
+			}
+		}
+	}
+}

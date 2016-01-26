@@ -26,6 +26,9 @@ a {
   color: #afc536;
   text-decoration: underline; }
 
+img {
+  max-width: 100%; }
+
 .table {
   margin-bottom: 0; }
 
@@ -33,13 +36,15 @@ a {
   color: #999; }
 
 .main-content {
-  padding-left: 85px;
-  position: relative;
-  height: 100%; }
+  padding-left: 90px;
+  height: 100%;
+  padding-top: 60px;
+  position: absolute;
+  top: 0;
+  width: 100%; }
   .main-content > div {
-    overflow: scroll;
-    padding-bottom: 60px;
-    height: 100%; }
+    height: 100%;
+    position: relative; }
     .main-content > div .widgets-wrapper {
       padding: 20px; }
       .main-content > div .widgets-wrapper .widgets-container > .row {
@@ -50,57 +55,89 @@ a {
       overflow: auto;
       height: 100%;
       padding-left: 300px; }
-  .main-content .context-menu {
-    position: absolute;
-    background-color: #fff;
-    top: 0;
-    left: 85px;
+
+.context-menu {
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  border-right: 1px solid #bcbbc6;
+  -webkit-transition: left .25s;
+  transition: left .25s; }
+  .context-menu .inside-menu {
     height: 100%;
-    border-right: 1px solid #bcbbc6;
-    -webkit-transition: left .25s;
-    transition: left .25s; }
-    .main-content .context-menu .context-menu-header {
-      padding: 20px 30px;
-      border-bottom: 1px solid #eee;
-      position: relative; }
-      .main-content .context-menu .context-menu-header .title {
-        font-size: 1.3em;
-        font-weight: 600; }
-      .main-content .context-menu .context-menu-header .context-tags {
-        font-size: .9em;
+    position: relative; }
+  .context-menu .context-menu-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
+    position: relative; }
+    .context-menu .context-menu-header .identity-logo {
+      margin-bottom: 20px; }
+    .context-menu .context-menu-header .title {
+      font-size: 1.3em;
+      font-weight: 600; }
+    .context-menu .context-menu-header .context-tags {
+      font-size: .9em;
+      color: #999;
+      margin-top: 10px; }
+    .context-menu .context-menu-header .toggler {
+      padding: 8px 5px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border: 1px solid #bcbbc6;
+      position: absolute;
+      left: -1px;
+      top: 14px;
+      color: #bbb; }
+      .context-menu .context-menu-header .toggler:hover {
+        cursor: pointer; }
+      .context-menu .context-menu-header .toggler .icon-chevron-right {
+        display: none; }
+  .context-menu .context-menu-content {
+    padding: 20px 30px; }
+    .context-menu .context-menu-content .category {
+      font-size: .9em;
+      margin-bottom: 30px; }
+      .context-menu .context-menu-content .category .category-title {
+        font-size: .8em;
         color: #999;
-        margin-top: 10px; }
-      .main-content .context-menu .context-menu-header .toggler {
-        padding: 8px 5px;
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-        border: 1px solid #bcbbc6;
-        position: absolute;
-        left: -1px;
-        top: 14px;
-        color: #bbb; }
-        .main-content .context-menu .context-menu-header .toggler:hover {
-          cursor: pointer; }
-        .main-content .context-menu .context-menu-header .toggler .icon-chevron-right {
-          display: none; }
-    .main-content .context-menu .context-menu-content {
-      padding: 20px 30px; }
-      .main-content .context-menu .context-menu-content .category {
-        font-size: .9em;
-        margin-bottom: 30px; }
-        .main-content .context-menu .context-menu-content .category .category-title {
-          font-size: .8em;
-          color: #999;
-          margin-bottom: 15px; }
-        .main-content .context-menu .context-menu-content .category .category-field {
-          position: relative;
-          min-height: 30px; }
-          .main-content .context-menu .context-menu-content .category .category-field .category-field-name {
-            width: 50%;
-            position: absolute;
-            font-weight: bold; }
-          .main-content .context-menu .context-menu-content .category .category-field .category-field-value {
-            padding-left: 50%; }
+        margin-bottom: 15px; }
+      .context-menu .context-menu-content .category .category-field {
+        position: relative;
+        min-height: 30px; }
+        .context-menu .context-menu-content .category .category-field .category-field-name {
+          width: 50%;
+          position: absolute;
+          font-weight: bold; }
+        .context-menu .context-menu-content .category .category-field .category-field-value {
+          padding-left: 50%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .context-menu .context-menu-content .category .category-field .category-field-label {
+          font-weight: bold;
+          margin-bottom: 5px; }
+  .context-menu.slide-menu {
+    width: 560px;
+    left: -280px;
+    z-index: 10; }
+    .context-menu.slide-menu .left-menu {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      left: 0;
+      height: 100%;
+      overflow-y: auto; }
+    .context-menu.slide-menu .right-menu {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      left: 50%;
+      height: 100%;
+      overflow-y: auto; }
+    .context-menu.slide-menu.toggle {
+      left: 0; }
 
 .cp-toggleable .cp-toggleable-content {
   display: none; }
@@ -111,6 +148,11 @@ a {
 .list-wrapper.empty .empty-list {
   display: block;
   color: #999; }
+
+.separator {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
 
 input {
   border-radius: 2px !important;
@@ -156,6 +198,48 @@ input {
   border-top-right-radius: 0;
   font-size: .9em; }
 
+.cp-datepicker {
+  display: inline-block;
+  padding-left: 10px; }
+  .cp-datepicker input {
+    max-width: 100px;
+    margin-left: 10px;
+    float: left !important;
+    color: #999; }
+  .cp-datepicker span {
+    font-size: .9em;
+    color: #999;
+    line-height: 32px;
+    float: left; }
+  .cp-datepicker i {
+    float: left;
+    color: #ccc;
+    font-size: 2em;
+    margin-left: 10px; }
+
+#ui-datepicker-div {
+  border-radius: 0;
+  border: none;
+  font-size: .9em;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  padding: 10px; }
+  #ui-datepicker-div .ui-datepicker-header {
+    background-color: #f8f8f8;
+    border-radius: 0;
+    border: 1px solid #eee;
+    font-size: .9em;
+    color: #999; }
+  #ui-datepicker-div th {
+    color: #999; }
+  #ui-datepicker-div .ui-state-default {
+    background-color: #f8f8f8;
+    border-color: #eee;
+    color: #777; }
+  #ui-datepicker-div .ui-state-active {
+    border-color: #afc536;
+    color: #afc536; }
+
 header {
   height: 60px; }
   header nav.navbar {
@@ -200,8 +284,7 @@ header {
   background-color: #36474f;
   position: absolute;
   left: 0;
-  min-width: 85px;
-  max-width: 90px;
+  width: 90px;
   z-index: 100; }
   .leftnav .leftnav-item > a {
     display: block;
@@ -356,7 +439,7 @@ header {
           color: #bbb; }
       .cp-panel .cp-panel-content .attachment:last-child {
         padding-bottom: 0;
-        margin-bottom: 0;
+        margin-bottom: 30px;
         border-bottom: none; }
     .cp-panel .cp-panel-content .drop-zone {
       border: 2px dashed #ccc;
@@ -427,7 +510,7 @@ table.cp-panel {
 
 .main-content .content-tabs {
   position: relative;
-  z-index: 100; }
+  z-index: 20; }
   .main-content .content-tabs .nav-tabs {
     background-color: #f8f8f8;
     border-bottom: 1px solid #d4d3da; }
@@ -450,3 +533,62 @@ table.cp-panel {
 
 .modal .modal-content {
   border-radius: 0; }
+
+section.notifications {
+  background-color: #fff;
+  border-left: 1px solid #bcbbc6;
+  padding: 30px 20px 0 0; }
+  section.notifications .cp-notification {
+    position: relative;
+    padding-left: 35px;
+    min-height: 50px; }
+    section.notifications .cp-notification .cp-notification-state {
+      position: absolute;
+      left: 10px;
+      top: 0; }
+      section.notifications .cp-notification .cp-notification-state.unread::before {
+        content: "\25CF";
+        color: #eaeaea;
+        font-size: 1.7em; }
+    section.notifications .cp-notification .cp-notification-content {
+      position: relative;
+      padding-left: 55px; }
+      section.notifications .cp-notification .cp-notification-content .cp-notification-type {
+        position: absolute;
+        left: 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        background-color: #eee;
+        text-align: center; }
+        section.notifications .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context {
+          font-family: 'icomoon' !important;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 32px;
+          font-size: 1.2em; }
+          section.notifications .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context.document:before {
+            content: "\e910"; }
+          section.notifications .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context.user:before {
+            content: "\e906"; }
+        section.notifications .cp-notification .cp-notification-content .cp-notification-type.info {
+          background-color: #dff7fa;
+          color: #00bcd6; }
+        section.notifications .cp-notification .cp-notification-content .cp-notification-type.danger {
+          background-color: #fee0dc;
+          color: #e81716; }
+        section.notifications .cp-notification .cp-notification-content .cp-notification-type.warning {
+          background-color: #dff7fa;
+          color: #00bcd6; }
+        section.notifications .cp-notification .cp-notification-content .cp-notification-type.success {
+          background-color: #f1f9e9;
+          color: #89c440; }
+      section.notifications .cp-notification .cp-notification-content .cp-notification-text {
+        padding: 6px 0;
+        font-size: .9em; }
+        section.notifications .cp-notification .cp-notification-content .cp-notification-text .meta {
+          font-size: .8em;
+          color: #999; }

@@ -121,7 +121,7 @@ img {
   .context-menu.slide-menu {
     width: 560px;
     left: -280px;
-    z-index: 10; }
+    z-index: 95; }
     .context-menu.slide-menu .left-menu {
       position: absolute;
       top: 0;
@@ -510,7 +510,7 @@ table.cp-panel {
 
 .main-content .content-tabs {
   position: relative;
-  z-index: 20; }
+  z-index: 96; }
   .main-content .content-tabs .nav-tabs {
     background-color: #f8f8f8;
     border-bottom: 1px solid #d4d3da; }
@@ -535,9 +535,19 @@ table.cp-panel {
   border-radius: 0; }
 
 section.notifications {
+  height: 100%;
+  position: absolute;
+  right: -400px;
+  top: 0;
+  margin-top: 60px;
+  min-width: 350px;
+  max-width: 400px;
+  z-index: 200;
   background-color: #fff;
   border-left: 1px solid #bcbbc6;
-  padding: 30px 20px 0 0; }
+  padding: 30px 20px 0 0;
+  display: block !important;
+  transition: right .25s; }
   section.notifications .cp-notification {
     position: relative;
     padding-left: 35px;
@@ -592,3 +602,39 @@ section.notifications {
         section.notifications .cp-notification .cp-notification-content .cp-notification-text .meta {
           font-size: .8em;
           color: #999; }
+
+body.notificationsOn section.notifications {
+  right: 0;
+  transition: right .25s; }
+
+body.notificationsOn header ul li[data-role="notifications"] {
+  background-color: #273238;
+  color: #fff !important; }
+
+body.notificationsOn section.cp-overlay {
+  opacity: .5;
+  width: 100%;
+  height: 100%;
+  transition: opacity .25s;
+  z-index: 101; }
+
+section.cp-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity .25s, height 0s .25s, width 0s .25s, z-index 0s .25s; }
+  section.cp-overlay.all, section.cp-overlay.header, section.cp-overlay.navs {
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    transition: opacity .25s; }
+  section.cp-overlay.all {
+    z-index: 10000; }
+  section.cp-overlay.header {
+    z-index: 101; }
+  section.cp-overlay.navs {
+    z-index: 90; }

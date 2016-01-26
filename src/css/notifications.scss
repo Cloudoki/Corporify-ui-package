@@ -1,7 +1,17 @@
 section.notifications {
+	height: 100%;
+  	position: absolute;
+  	right: -400px;
+  	top: 0;
+  	margin-top: 60px;
+  	min-width: 350px;
+  	max-width: 400px;
+  	z-index: 200;
 	background-color: #fff;
 	border-left: 1px solid #bcbbc6;
 	padding: 30px 20px 0 0;
+	display: block !important;
+	transition: right .25s;
 
 	.cp-notification {
 		position: relative;
@@ -79,5 +89,25 @@ section.notifications {
 				}
 			}
 		}
+	}
+}
+
+body.notificationsOn {
+	section.notifications {
+		right: 0;
+		transition: right .25s;
+	}
+
+	header ul li[data-role="notifications"] {
+		background-color: #273238;
+    	color: #fff !important;
+	}
+
+	section.cp-overlay {
+		opacity: .5;
+		width: 100%;
+		height: 100%;
+		transition: opacity .25s;
+		z-index: 101;
 	}
 }

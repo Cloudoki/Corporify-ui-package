@@ -59,3 +59,62 @@ input {
 		}
 	}
 }
+
+.cp-datepicker {	
+
+	display: inline-block;
+	padding-left: 10px;
+
+	input {
+		max-width: 100px;
+		margin-left: 10px;
+		float: left !important;
+		color: #999;
+	}
+
+	span {
+		font-size: .9em;
+		color: #999;
+		line-height: 32px;
+		float: left;
+	}
+
+	i {
+		float: left;
+		color: #ccc;
+		font-size: 2em;
+		margin-left: 10px;
+	}
+}
+
+#ui-datepicker-div {
+	border-radius: 0;
+    border: none;
+    font-size: .9em;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    padding: 10px;
+
+    .ui-datepicker-header {
+    	background-color: #f8f8f8;
+    	border-radius: 0;
+    	border: 1px solid #eee;
+    	font-size: .9em;
+    	color: #999;
+    }
+
+    th {
+    	color: #999;
+    }
+
+    .ui-state-default {
+    	background-color: #f8f8f8;
+    	border-color: #eee;
+    	color: #777;
+    }
+
+    .ui-state-active {
+    	border-color: $green;
+    	color: $green;
+    }
+}

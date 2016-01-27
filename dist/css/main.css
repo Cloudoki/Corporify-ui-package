@@ -181,26 +181,41 @@ img {
     padding: 20px 30px; }
     .context-menu .context-menu-content .category {
       font-size: .9em;
-      margin-bottom: 30px; }
+      margin-bottom: 15px;
+      transition: margin-bottom .25s; }
       .context-menu .context-menu-content .category .category-title {
+        position: relative;
         font-size: .8em;
         color: #999;
         margin-bottom: 15px; }
-      .context-menu .context-menu-content .category .category-field {
-        position: relative;
-        min-height: 30px; }
-        .context-menu .context-menu-content .category .category-field .category-field-name {
-          width: 50%;
+        .context-menu .context-menu-content .category .category-title:after {
+          font-family: 'icomoon' !important;
+          content: "\e909";
           position: absolute;
-          font-weight: bold; }
-        .context-menu .context-menu-content .category .category-field .category-field-value {
-          padding-left: 50%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis; }
-        .context-menu .context-menu-content .category .category-field .category-field-label {
-          font-weight: bold;
-          margin-bottom: 5px; }
+          right: 0; }
+        .context-menu .context-menu-content .category .category-title:hover {
+          cursor: pointer; }
+      .context-menu .context-menu-content .category .category-content {
+        display: none; }
+        .context-menu .context-menu-content .category .category-content .category-field {
+          position: relative;
+          min-height: 30px; }
+          .context-menu .context-menu-content .category .category-content .category-field .category-field-name {
+            width: 50%;
+            position: absolute;
+            font-weight: bold; }
+          .context-menu .context-menu-content .category .category-content .category-field .category-field-value {
+            padding-left: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .context-menu .context-menu-content .category .category-content .category-field .category-field-label {
+            font-weight: bold;
+            margin-bottom: 5px; }
+      .context-menu .context-menu-content .category.expanded {
+        margin-bottom: 30px; }
+        .context-menu .context-menu-content .category.expanded .category-title:after {
+          content: "\e90a"; }
   .context-menu.slide-menu {
     width: 560px;
     left: -280px;

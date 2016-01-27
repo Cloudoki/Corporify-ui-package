@@ -141,33 +141,62 @@ img {
 
 		.category {
 			font-size: .9em;
-			margin-bottom: 30px;
+			margin-bottom: 15px;
+			transition: margin-bottom .25s;
 
 			.category-title {
+				position: relative;
 				font-size: .8em;
 				color: #999;
 				margin-bottom: 15px;
-			}
-			.category-field {
-				position: relative;
-				min-height: 30px;
 
-				.category-field-name {
-					width: 50%;
+				&:after {
+					font-family: 'icomoon' !important;
+					content: "\e909";
 					position: absolute;
-					font-weight: bold;
+					right: 0;
 				}
-				.category-field-value {
-					padding-left: 50%;
-					white-space: nowrap;
-						overflow: hidden;
-						text-overflow: ellipsis;
-				}
-				.category-field-label {
-					font-weight: bold;
-					margin-bottom: 5px;
+
+				&:hover {
+					cursor: pointer;
 				}
 			}
+
+			.category-content {
+				display: none;
+
+				.category-field {
+					position: relative;
+					min-height: 30px;
+
+					.category-field-name {
+						width: 50%;
+						position: absolute;
+						font-weight: bold;
+					}
+					.category-field-value {
+						padding-left: 50%;
+						white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+					}
+					.category-field-label {
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+				}
+			}
+
+			&.expanded {
+				margin-bottom: 30px;
+				//transition: margin-bottom .25s;
+
+				.category-title {
+					&:after {
+						content: "\e90a";
+					}
+				}
+			}			
 		}
 	}
 

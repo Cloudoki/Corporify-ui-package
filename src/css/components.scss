@@ -38,6 +38,10 @@
 				}
 			}
 		}
+
+		.cp-btn	{
+			margin: -10px 0;
+		}
 	}
 
 	.cp-panel-content {
@@ -96,32 +100,6 @@
 						}
 					}
 				}
-			}
-		}
-
-		.note {
-			border-bottom: 1px solid #eee;
-			margin-bottom: 20px;
-			padding-bottom: 20px;
-
-			.note-title {
-				font-weight: bold;
-				margin-bottom: 10px;
-			}
-
-			p {
-				color: #777;
-			}
-
-			.note-meta {
-				color: #bbb;
-				font-size: .8em;
-			}
-
-			&:last-child {
-				padding-bottom: 0;
-				margin-bottom: 0;
-				border-bottom: none;
 			}
 		}
 
@@ -208,13 +186,33 @@
 .cp-btn {
 	padding: 6px 12px;
 	border-radius: 2px;
-	border: 1px solid #ccc;
+	border: 2px solid #ccc;
 	color: #ccc;
+	display: inline-block;
+	font-size: .9em;
+
+	&.simple {
+		border: none;
+		text-decoration: underline;
+		&:hover {
+			border: none;
+		}
+	}
 
 	&:hover {
 		cursor: pointer;
 		color: #bbb;
-		border: 1px solid #bbb;
+		border: 2px solid #bbb;
+	}
+
+	&.greened {
+		border-color: $green;
+		color: $green;
+
+		&:hover {
+			border-color: $dark-green;
+			color: $dark-green;
+		}
 	}
 }
 

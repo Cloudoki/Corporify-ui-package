@@ -1,0 +1,50 @@
+.notes-panel {
+
+	.entry-create {
+		display: none;
+	}
+
+	.notes-list {
+		> div > div {
+			border-bottom: 1px solid #eee;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+
+			.note-title {
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			p {
+				color: #777;
+			}
+
+			.note-meta {
+				color: #bbb;
+				font-size: .8em;
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+				margin-bottom: 0;
+				border-bottom: none;
+			}
+		}
+
+	}
+
+	.note-create {
+		text-align: right;
+
+		textarea {
+			margin: 10px 0;
+		}
+	}
+
+	&.adding {
+		[data-action=add] {
+			color: #afc536;
+			border-color: #afc536;
+		}
+	}
+}

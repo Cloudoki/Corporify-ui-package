@@ -257,6 +257,16 @@ input {
   box-shadow: none !important;
   font-size: .9em !important; }
 
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 100%;
+  min-height: 60px;
+  resize: vertical;
+  font-size: .9em;
+  padding: 10px;
+  color: #666; }
+
 .input-group {
   width: 100%; }
   .input-group.iconed {
@@ -476,6 +486,8 @@ header {
       margin-left: 10px; }
       .cp-panel .cp-panel-header .cp-actions .input-group:first-child {
         margin-left: 0; }
+    .cp-panel .cp-panel-header .cp-btn {
+      margin: -10px 0; }
   .cp-panel .cp-panel-content {
     padding: 30px;
     overflow: auto; }
@@ -504,22 +516,6 @@ header {
         .cp-panel .cp-panel-content.table table > tbody > tr:last-child > td {
           border-bottom: 0;
           padding-bottom: 30px; }
-    .cp-panel .cp-panel-content .note {
-      border-bottom: 1px solid #eee;
-      margin-bottom: 20px;
-      padding-bottom: 20px; }
-      .cp-panel .cp-panel-content .note .note-title {
-        font-weight: bold;
-        margin-bottom: 10px; }
-      .cp-panel .cp-panel-content .note p {
-        color: #777; }
-      .cp-panel .cp-panel-content .note .note-meta {
-        color: #bbb;
-        font-size: .8em; }
-      .cp-panel .cp-panel-content .note:last-child {
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border-bottom: none; }
     .cp-panel .cp-panel-content .attachment {
       position: relative;
       padding-left: 30px;
@@ -571,12 +567,25 @@ header {
 .cp-btn {
   padding: 6px 12px;
   border-radius: 2px;
-  border: 1px solid #ccc;
-  color: #ccc; }
+  border: 2px solid #ccc;
+  color: #ccc;
+  display: inline-block;
+  font-size: .9em; }
+  .cp-btn.simple {
+    border: none;
+    text-decoration: underline; }
+    .cp-btn.simple:hover {
+      border: none; }
   .cp-btn:hover {
     cursor: pointer;
     color: #bbb;
-    border: 1px solid #bbb; }
+    border: 2px solid #bbb; }
+  .cp-btn.greened {
+    border-color: #afc536;
+    color: #afc536; }
+    .cp-btn.greened:hover {
+      border-color: #99ac30;
+      color: #99ac30; }
 
 table.cp-panel {
   font-size: .9em; }
@@ -736,3 +745,32 @@ section.cp-overlay {
     z-index: 101; }
   section.cp-overlay.navs {
     z-index: 90; }
+
+.notes-panel .entry-create {
+  display: none; }
+
+.notes-panel .notes-list > div > div {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+  .notes-panel .notes-list > div > div .note-title {
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .notes-panel .notes-list > div > div p {
+    color: #777; }
+  .notes-panel .notes-list > div > div .note-meta {
+    color: #bbb;
+    font-size: .8em; }
+  .notes-panel .notes-list > div > div:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none; }
+
+.notes-panel .note-create {
+  text-align: right; }
+  .notes-panel .note-create textarea {
+    margin: 10px 0; }
+
+.notes-panel.adding [data-action=add] {
+  color: #afc536;
+  border-color: #afc536; }

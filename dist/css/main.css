@@ -487,7 +487,10 @@ header {
       .cp-panel .cp-panel-header .cp-actions .input-group:first-child {
         margin-left: 0; }
     .cp-panel .cp-panel-header .cp-btn {
-      margin: -10px 0; }
+      margin: -10px 0;
+      line-height: 1em; }
+      .cp-panel .cp-panel-header .cp-btn span {
+        font-size: 1.3em; }
   .cp-panel .cp-panel-content {
     padding: 30px;
     overflow: auto; }

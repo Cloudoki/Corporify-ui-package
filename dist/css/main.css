@@ -145,77 +145,13 @@ img {
   top: 0;
   left: 0px;
   height: 100%;
+  font-size: .9em;
   border-right: 1px solid #bcbbc6;
   -webkit-transition: left .25s;
   transition: left .25s; }
   .context-menu .inside-menu {
     height: 100%;
     position: relative; }
-  .context-menu .context-menu-header {
-    padding: 20px 30px;
-    border-bottom: 1px solid #eee;
-    position: relative; }
-    .context-menu .context-menu-header .identity-logo {
-      margin-bottom: 20px; }
-    .context-menu .context-menu-header .title {
-      font-size: 1.3em;
-      font-weight: 600; }
-    .context-menu .context-menu-header .context-tags {
-      font-size: .9em;
-      color: #999;
-      margin-top: 10px; }
-    .context-menu .context-menu-header .toggler {
-      padding: 8px 5px;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      border: 1px solid #bcbbc6;
-      position: absolute;
-      left: -1px;
-      top: 14px;
-      color: #bbb; }
-      .context-menu .context-menu-header .toggler:hover {
-        cursor: pointer; }
-      .context-menu .context-menu-header .toggler .icon-chevron-right {
-        display: none; }
-  .context-menu .context-menu-content {
-    padding: 20px 30px; }
-    .context-menu .context-menu-content .category {
-      font-size: .9em;
-      margin-bottom: 15px;
-      transition: margin-bottom .25s; }
-      .context-menu .context-menu-content .category .category-title {
-        position: relative;
-        font-size: .8em;
-        color: #999;
-        margin-bottom: 15px; }
-        .context-menu .context-menu-content .category .category-title:after {
-          font-family: 'icomoon' !important;
-          content: "\e909";
-          position: absolute;
-          right: 0; }
-        .context-menu .context-menu-content .category .category-title:hover {
-          cursor: pointer; }
-      .context-menu .context-menu-content .category .category-content {
-        display: none; }
-        .context-menu .context-menu-content .category .category-content .category-field {
-          position: relative;
-          min-height: 30px; }
-          .context-menu .context-menu-content .category .category-content .category-field .category-field-name {
-            width: 50%;
-            position: absolute;
-            font-weight: bold; }
-          .context-menu .context-menu-content .category .category-content .category-field .category-field-value {
-            padding-left: 50%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis; }
-          .context-menu .context-menu-content .category .category-content .category-field .category-field-label {
-            font-weight: bold;
-            margin-bottom: 5px; }
-      .context-menu .context-menu-content .category.expanded {
-        margin-bottom: 30px; }
-        .context-menu .context-menu-content .category.expanded .category-title:after {
-          content: "\e90a"; }
   .context-menu.slide-menu {
     width: 560px;
     left: -280px;
@@ -256,6 +192,13 @@ input {
   border-radius: 2px !important;
   box-shadow: none !important;
   font-size: .9em !important; }
+  input.inline-edit {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 1em !important;
+    padding: 3px 0 0 0;
+    height: auto;
+    background-color: transparent; }
 
 textarea {
   border: 1px solid #ccc;
@@ -567,29 +510,6 @@ header {
   .cp-panel.tabbed .cp-panel-header {
     padding: 20px 30px; }
 
-.cp-btn {
-  padding: 6px 12px;
-  border-radius: 2px;
-  border: 2px solid #ccc;
-  color: #ccc;
-  display: inline-block;
-  font-size: .9em; }
-  .cp-btn.simple {
-    border: none;
-    text-decoration: underline; }
-    .cp-btn.simple:hover {
-      border: none; }
-  .cp-btn:hover {
-    cursor: pointer;
-    color: #bbb;
-    border: 2px solid #bbb; }
-  .cp-btn.greened {
-    border-color: #afc536;
-    color: #afc536; }
-    .cp-btn.greened:hover {
-      border-color: #99ac30;
-      color: #99ac30; }
-
 table.cp-panel {
   font-size: .9em; }
   table.cp-panel thead th {
@@ -777,3 +697,34 @@ section.cp-overlay {
 .notes-panel.adding [data-action=add] {
   color: #afc536;
   border-color: #afc536; }
+
+.cp-btn {
+  padding: 6px 12px;
+  border-radius: 2px;
+  border: 2px solid #ccc;
+  color: #ccc;
+  display: inline-block;
+  font-size: .9em; }
+  .cp-btn.simple {
+    border: none;
+    text-decoration: underline; }
+    .cp-btn.simple:hover {
+      border: none; }
+  .cp-btn.full {
+    width: 100%; }
+  .cp-btn:hover {
+    cursor: pointer;
+    color: #bbb;
+    border: 2px solid #bbb; }
+  .cp-btn.greened {
+    border-color: #afc536;
+    color: #afc536; }
+    .cp-btn.greened.filled {
+      background-color: #afc536;
+      color: #fff; }
+      .cp-btn.greened.filled:hover {
+        color: #fff;
+        background-color: #99ac30; }
+    .cp-btn.greened:hover {
+      border-color: #99ac30;
+      color: #99ac30; }

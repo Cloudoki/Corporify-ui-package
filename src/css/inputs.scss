@@ -2,6 +2,15 @@ input {
 	border-radius: 2px !important;
 	box-shadow: none !important;
 	font-size: .9em !important;
+
+	&.inline-edit {
+		border: none;
+	    border-bottom: 1px solid #ccc;
+	    font-size: 1em !important;
+	    padding: 3px 0 0 0;
+	    height: auto;
+	    background-color: transparent;
+	}
 }	
 
 textarea {

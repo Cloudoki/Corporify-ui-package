@@ -17,284 +17,111 @@
 </head>
 
 <body>
-<header>
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  	<div class="content-container">
-	    	<div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href=""><img src="http://placehold.it/120x40"></a>
-		    </div>
-	
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      
-		      	<ul class="nav navbar-nav navbar-right">
-		      		 <li class="navbar-icon">
-		      			<i class="icon-search"></i>
-		      		</li>		        <li class="dropdown">
-			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-			          		Rui Molefas <span class="caret"></span>
-			          	</a>
-			          	<ul class="dropdown-menu user-menu">
-			          		<i class="fa fa-caret-up"></i>
-				            <li><a href="#profile">Profile</a></li>
-				            <li><a href="#logout">Logout</a></li>
-			          	</ul>
-			        </li>
-			         <li class="navbar-icon">
-			        	<i class="icon-ios-bell"></i>
-			        </li>		         <li class="navbar-icon">
-			        	<i class="icon-ios-alarm"></i>
-			        </li>
-		      	</ul>
-		    </div>
-	  	</div>
-	</nav></header>
-<div class="leftnav">
-	<ul>
-		<li class="leftnav-item">
-			<i class="icon-ios-home"></i>
-			<div class="item-name">Dashboard</div>
-		</li>
-		<li class="leftnav-item">
-			<i class="icon-ios-person"></i>
-			<div class="item-name">Persons</div>
-		</li>
-		<li class="leftnav-item">
-			<i class="icon-building-o"></i>
-			<div class="item-name">Identities</div>
-		</li>
-		<li class="leftnav-item">
-			<i class="icon-ios-alarm"></i>
-			<div class="item-name">Reminders</div>
-		</li>
-		<li class="leftnav-item">
-			<i class="icon-ios-list"></i>
-			<div class="item-name">Documents</div>
-		</li>
-		<li class="leftnav-item">
-			<i class="icon-ios-compose"></i>
-			<div class="item-name">Notes</div>
-		</li>
-		<li class="leftnav-item">
-			<i class="icon-key"></i>
-			<div class="item-name">Admin</div>
-		</li>
-	</ul>
-</div><div class="bread-nav">
-	<div class="bread-nav-nav">
-		<div class="nav-back nav-btn"><</div>
-		<div class="nav-forward nav-btn">></div>
-	</div>
-	<div class="breadcrumbs">
-		<a href="#">person</a>
-		<a href="#">person</a>
-		<span>asd</span>
-	</div>
-</div><section class="main-content">
-	<div class="inside menued">
-		<!-- <div class="row">
-			<div class="col-sm-6">
-				<div class="cp-panel">
-					<div class="cp-panel-header">
-						<div class="row">
-							<div class="col-sm-5">
-								<h3>Identities / Natural Persons</h3>
-								<div class="subtitle">5 results found</div>
-							</div>
-							<div class="col-sm-7 cp-actions">
-								<div class="cp-btn pull-right">
-									<span class="icon-plus"></span>
-								</div>
-								<div class="input-group iconed pull-right">
-									<input type="text" class="form-control" placeholder="search">
-									<i class="icon-search"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="cp-panel-content table"></div>
-				</div>			</div>
-			<div class="col-sm-6">
-				<div class="cp-panel">
-					<div class="cp-panel-header">
-						<div class="row">
-							<div class="col-sm-5">
-								<h3>Upcoming Reminders</h3>
-								<div class="subtitle">3 reminders</div>
-							</div>
-							<div class="col-sm-7 cp-actions">
-								<div class="cp-btn pull-right">
-									<span class="icon-plus"></span>
-								</div>
-								<div class="input-group iconed pull-right">
-									<input type="text" class="form-control" placeholder="search">
-									<i class="icon-search"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="cp-panel-content table"></div>
-				</div>			</div>
-		</div> -->
-		<div class="cp-panel tabbed">
-			<ul class="nav nav-tabs">
-	  			<li role="presentation" class="active"><a href="#">Home</a></li>
-	  			<li role="presentation"><a href="#">Profile</a></li>
-	  			<li role="presentation"><a href="#">Messages</a></li>
-			</ul>
-			<div class="tab-content cp-panel">
-			    <div role="tabpanel" class="tab-pane active" id="home">
-			    	<div class="cp-panel-header">
-			    		<div class="input-group iconed">
-							<input type="text" class="form-control" placeholder="search">
-							<i class="icon-search"></i>
-						</div>
-			    	</div>
-			    	<div class="cp-panel-content"></div>
-			    </div>
-			    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-			    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-			    <div role="tabpanel" class="tab-pane" id="settings">...</div>
-  			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-sm-6">
-				<div class="cp-panel notes-panel">
-					<div class="cp-panel-header">
-						<div class="row">
-							<div class="col-xs-6">
-								<h3>Notes</h3>
-							</div>
-							<div class="col-xs-6 cp-actions">
-								<div class="cp-btn pull-right">
-									<span class="icon-plus"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="cp-panel-content">
-						<div class="note">
-							<div class="note-title">Note 1</div>
-							<p class="note-content">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium urna in purus venenatis, eget placerat quam convallis. Cras hendrerit sem eros, a tincidunt dolor sollicitudin ac. Vivamus eget porta dui. 
-							</p>
-							<div class="note-meta">by Rui Molefas, 01/12/2015</div>
-						</div>
-						<div class="note">
-							<div class="note-title">Note 1</div>
-							<p class="note-content">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium urna in purus venenatis, eget placerat quam convallis. Cras hendrerit sem eros, a tincidunt dolor sollicitudin ac. Vivamus eget porta dui. 
-							</p>
-							<div class="note-meta">by Rui Molefas, 01/12/2015</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6">
-				<div class="cp-panel">
-					<div class="cp-panel-header">
-						<h3>Attachments</h3>
-					</div>
-					<div class="cp-panel-content">
-						<div class="attachment">
-							<div class="row">
-								<span class="icon-image"></span>
-								<div class="col-xs-3">
-									<a class="att-name" href="#">idcard.jpg</a>
-								</div>
-								<div class="col-xs-4">
-									<select class="chosen-select">
-										<option value="1">Value</option>
-									</select>
-								</div>
-								<div class="col-xs-5">
-									<div class="att-meta date">Added: 21/12/2015</div>
-									<div class="att-meta">Metadata text, free to add.</div>
-								</div>
-							</div>
-						</div>
-						<div class="attachment">
-							<div class="row">
-								<span class="icon-image"></span>
-								<div class="col-xs-3">
-									<a class="att-name" href="#">idcard.jpg</a>
-								</div>
-								<div class="col-xs-4">
-									<select class="chosen-select">
-										<option value="1">Value</option>
-									</select>
-								</div>
-								<div class="col-xs-5">
-									<div class="att-meta date">Added: 21/12/2015</div>
-									<div class="att-meta">Metadata text, free to add.</div>
-								</div>
-							</div>
-						</div>
-						<div class="drop-zone">Click or drop items to upload</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
 
-	<div class="context-menu person-menu">
-		<div class="context-menu-header">
-			<div class="title">Evelyn De Both</div>
-			<div class="context-tags">
-				<span>Tags:</span>
-				<span class="tags">important, CEO</span>
-			</div>
-		</div>
-		<div class="context-menu-content">
-			<div class="category">
-				<div class="category-title">General coordinates</div>
-				<div class="category-field">
-					<div class="category-field-name">Title:</div>
-					<div class="category-field-value">Duchess</div>	
-				</div>
-				<div class="category-field">
-					<div class="category-field-name">First name:</div>
-					<div class="category-field-value">Evelyn</div>	
-				</div>
-				<div class="category-field">
-					<div class="category-field-name">Middle names:</div>
-					<div class="category-field-value">Lumpy Space</div>	
-				</div>
-				<div class="category-field">
-					<div class="category-field-name">Last name:</div>
-					<div class="category-field-value">De Both</div>	
-				</div>
-				<div class="category-field">
-					<div class="category-field-name">Gender:</div>
-					<div class="category-field-value">Female</div>	
-				</div>
-				<div class="category-field">
-					<div class="category-field-name">Language:</div>
-					<div class="category-field-value">Dutch</div>	
-				</div>
-				<div class="category-field">
-					<div class="category-field-name">Nationality:</div>
-					<div class="category-field-value">Belgium</div>	
-				</div>
-				<div class="category-field">
-					<div class="category-field-name">VAT:</div>
-					<div class="category-field-value">BE000000000</div>	
-				</div>
+<table id="email-table-container">
+	<tr><!-- TEMPLATE // -->
+		<td align="center" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" id="email-container" class="cp-panel">
 
-			</div>
+				<tr><!-- HEADER // -->
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" id="email-header">
+							<tr>
+								<td class="email-logo">
+									<img src="http://ingridwu.dmmdmcfatter.com/wp-content/uploads/2015/01/placeholder.png" alt="left-column-img" alt="logo" desc="logo">
+								</td>
+							</tr>
+							<tr>
+								<th class="email-title">
+									<h2>Mail Template</h2>
+								</th>
+							</tr>
+						</table>
+					</td>
+				</tr><!-- // END HEADER -->
 
-		</div>
-	</div>
-</section>
-      
+
+				<tr> <!-- FIRST CONTENT // -->
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" class="table-content">
+							<tr>
+								<td class="body-content">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<th class="section-title">
+												<h3>Section title</h3>
+											</th>
+										</tr>
+										<tr >
+											<td class="text-content">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr> <!-- // END FIRST CONTENT -->
+
+
+				<tr> <!-- BEGIN COLUMNS // -->
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td valign="top">
+									<table border="0" cellpadding="20" cellspacing="0" width="100%">
+										<tr>
+											<td class="left-column-content">
+												<img src="http://ingridwu.dmmdmcfatter.com/wp-content/uploads/2015/01/placeholder.png" alt="left-column-img">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table border="0" cellpadding="20" cellspacing="0" width="100%">
+										<tr>
+											<td  class="right-column-content">
+												<img src="http://ingridwu.dmmdmcfatter.com/wp-content/uploads/2015/01/placeholder.png" alt="right-column-img">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr> <!-- // END COLUMNS -->
+
+
+				<tr> <!-- LAST CONTENT // -->
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" class="table-content">
+							<tr>
+								<td class="body-content">
+									<table border="0" cellpadding="0" cellspacing="0" >
+										<tr>
+											<th class="section-title">
+												<h3>Section title</h3>
+											</th>
+										</tr>
+										<tr>
+											<td class="text-content">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr> <!-- // END LAST CONTENT -->
+
+			</table>
+		</td>
+	</tr><!-- // END TEMPLATE -->
+</table>
 </body>
 
 <!-- Add vendor scripts here -->

@@ -93,7 +93,8 @@ html {
     padding: 0px;
     background-color: #f1f1f1;
     color: #333;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
 
 table {
   width: 100%; }
@@ -154,23 +155,31 @@ img {
   .context-menu.slide-menu {
     width: 560px;
     left: -280px;
-    z-index: 95; }
+    z-index: 95;
+    border-right: none; }
     .context-menu.slide-menu .left-menu {
       position: absolute;
+      background-color: #fff;
       top: 0;
       width: 50%;
       left: 0;
       height: 100%;
-      overflow-y: auto; }
+      overflow-y: auto;
+      z-index: 10; }
     .context-menu.slide-menu .right-menu {
       position: absolute;
+      background-color: #fff;
       top: 0;
       width: 50%;
       left: 50%;
       height: 100%;
-      overflow-y: auto; }
+      overflow-y: auto;
+      border-right: 1px solid #bcbbc6;
+      transition: left .25s; }
     .context-menu.slide-menu.toggle {
       left: 0; }
+      .context-menu.slide-menu.toggle.semi-toggle .right-menu {
+        left: 0%; }
 
 .cp-toggleable .cp-toggleable-content {
   display: none; }
@@ -209,20 +218,18 @@ textarea {
   padding: 10px;
   color: #666; }
 
-.input-group {
-  width: 100%; }
-  .input-group.iconed {
-    position: relative; }
-    .input-group.iconed > [class^="icon-"],
-    .input-group.iconed > [class*=" icon-"] {
-      position: absolute;
-      right: 10px;
-      top: 6px;
-      font-size: 1.5em;
-      z-index: 10;
-      color: #ccc; }
-    .input-group.iconed input {
-      padding-right: 40px; }
+.input-group.iconed {
+  position: relative; }
+  .input-group.iconed > [class^="icon-"],
+  .input-group.iconed > [class*=" icon-"] {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    font-size: 1.5em;
+    z-index: 10;
+    color: #ccc; }
+  .input-group.iconed input {
+    padding-right: 40px; }
 
 .chosen-container-single > .chosen-single {
   border-radius: 2px;
@@ -234,9 +241,14 @@ textarea {
   height: 34px;
   font-size: .9em;
   line-height: 18px;
-  color: #999; }
+  color: #555; }
   .chosen-container-single > .chosen-single > div > b {
     background-position-y: 5px; }
+  .chosen-container-single > .chosen-single span {
+    margin-right: 18px; }
+
+.chosen-container-single > .chosen-default {
+  color: #aaa; }
 
 .chosen-container-single.chosen-container-active > .chosen-single {
   background: #fff; }
@@ -255,7 +267,7 @@ textarea {
     max-width: 100px;
     margin-left: 10px;
     float: left !important;
-    color: #999; }
+    color: #555; }
   .cp-datepicker span {
     font-size: .9em;
     color: #999;
@@ -304,30 +316,47 @@ header {
       font-size: 1.5em;
       padding: 15px 18px;
       color: #90a4af; }
-    header nav.navbar .navbar-right > li > a {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      color: #90a4af; }
-    header nav.navbar .navbar-right > li:hover {
-      background-color: #273238;
-      color: #ddd;
-      cursor: pointer; }
-      header nav.navbar .navbar-right > li:hover > a {
-        color: #ddd; }
-    header nav.navbar .navbar-right > li.open > a, header nav.navbar .navbar-right > li.open a:hover {
-      background-color: #273238 !important;
-      color: #fff !important; }
-    header nav.navbar .navbar-right > li.open .dropdown-menu {
-      border-radius: 0;
-      border: none;
-      font-size: .9em;
-      padding: 0; }
-      header nav.navbar .navbar-right > li.open .dropdown-menu li a {
-        text-decoration: none;
-        padding: 15px 20px 10px; }
-        header nav.navbar .navbar-right > li.open .dropdown-menu li a:hover {
-          background-color: #e8e8e8 !important;
-          color: #333 !important; }
+    header nav.navbar .navbar-right > li {
+      position: relative; }
+      header nav.navbar .navbar-right > li > a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #90a4af; }
+      header nav.navbar .navbar-right > li .counter {
+        position: absolute;
+        display: none;
+        background-color: red;
+        font-size: .6em;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        line-height: 1.3em;
+        color: #fff;
+        border-radius: 100%;
+        top: 13px;
+        right: 8px; }
+      header nav.navbar .navbar-right > li.warn .counter {
+        display: block; }
+      header nav.navbar .navbar-right > li:hover {
+        background-color: #273238;
+        color: #ddd;
+        cursor: pointer; }
+        header nav.navbar .navbar-right > li:hover > a {
+          color: #ddd; }
+      header nav.navbar .navbar-right > li.open > a, header nav.navbar .navbar-right > li.open a:hover {
+        background-color: #273238 !important;
+        color: #fff !important; }
+      header nav.navbar .navbar-right > li.open .dropdown-menu {
+        border-radius: 0;
+        border: none;
+        font-size: .9em;
+        padding: 0; }
+        header nav.navbar .navbar-right > li.open .dropdown-menu li a {
+          text-decoration: none;
+          padding: 15px 20px 10px; }
+          header nav.navbar .navbar-right > li.open .dropdown-menu li a:hover {
+            background-color: #e8e8e8 !important;
+            color: #333 !important; }
 
 .leftnav {
   height: 100%;
@@ -421,18 +450,19 @@ header {
       position: relative;
       top: 3px;
       margin-bottom: -5px; }
-    .cp-panel .cp-panel-header .cp-actions .input-group {
-      max-width: 150px;
-      display: inline-block;
-      max-width: 150px;
-      margin-left: 10px; }
-      .cp-panel .cp-panel-header .cp-actions .input-group:first-child {
-        margin-left: 0; }
+    .cp-panel .cp-panel-header .cp-actions {
+      margin-top: -5px;
+      margin-bottom: -10px; }
+      .cp-panel .cp-panel-header .cp-actions .input-group {
+        max-width: 150px;
+        display: inline-block;
+        margin: 4px 5px; }
     .cp-panel .cp-panel-header .cp-btn {
-      margin: -10px 0;
       line-height: 1em; }
       .cp-panel .cp-panel-header .cp-btn span {
         font-size: 1.3em; }
+      .cp-panel .cp-panel-header .cp-btn.no-margin {
+        margin: -10px 0; }
   .cp-panel .cp-panel-content {
     padding: 30px;
     overflow: auto; }
@@ -454,10 +484,16 @@ header {
         .cp-panel .cp-panel-content.table table > tbody > tr > td {
           padding: 6px 5px;
           border-bottom: 1px solid #eee; }
+          .cp-panel .cp-panel-content.table table > tbody > tr > td.clickable:hover {
+            cursor: pointer;
+            text-decoration: underline; }
           .cp-panel .cp-panel-content.table table > tbody > tr > td:first-child {
             padding-left: 30px; }
           .cp-panel .cp-panel-content.table table > tbody > tr > td:last-child {
             padding-right: 30px; }
+        .cp-panel .cp-panel-content.table table > tbody > tr.inactive > td {
+          background-color: #f9f9f9;
+          color: #ccc; }
         .cp-panel .cp-panel-content.table table > tbody > tr:last-child > td {
           border-bottom: 0;
           padding-bottom: 30px; }
@@ -563,6 +599,21 @@ table.cp-panel {
 .modal .modal-content {
   border-radius: 0; }
 
+.modal .modal-body,
+.modal .modal-header {
+  padding: 30px; }
+
+.modal .modal-title {
+  color: #465a65;
+  font-weight: 600; }
+
+.modal .modal-body {
+  color: #777; }
+
+.modal .modal-footer {
+  padding: 10px 30px 30px 30px;
+  border: none; }
+
 #email-table-container {
   background-color: #f1f1f1;
   width: 100%;
@@ -630,63 +681,83 @@ section.notifications {
   z-index: 200;
   background-color: #fff;
   border-left: 1px solid #bcbbc6;
-  padding: 30px 20px 0 0;
+  padding-bottom: 60px;
   display: block !important;
   transition: right .25s; }
-  section.notifications .cp-notification {
+  section.notifications .notifications-wrapper {
     position: relative;
-    padding-left: 35px;
-    min-height: 50px; }
-    section.notifications .cp-notification .cp-notification-state {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px; }
+    section.notifications .notifications-wrapper .all-notifications {
       position: absolute;
-      left: 10px;
-      top: 0; }
-      section.notifications .cp-notification .cp-notification-state.unread::before {
-        content: "\25CF";
-        color: #eaeaea;
-        font-size: 1.7em; }
-    section.notifications .cp-notification .cp-notification-content {
-      position: relative;
-      padding-left: 55px; }
-      section.notifications .cp-notification .cp-notification-content .cp-notification-type {
-        position: absolute;
-        left: 0;
-        width: 35px;
-        height: 35px;
-        border-radius: 100%;
-        background-color: #eee;
-        text-align: center; }
-        section.notifications .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context {
-          font-family: 'icomoon' !important;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 32px;
-          font-size: 1.2em; }
-          section.notifications .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context.document:before {
-            content: "\e910"; }
-          section.notifications .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context.user:before {
-            content: "\e906"; }
-        section.notifications .cp-notification .cp-notification-content .cp-notification-type.info {
-          background-color: #dff7fa;
-          color: #00bcd6; }
-        section.notifications .cp-notification .cp-notification-content .cp-notification-type.danger {
-          background-color: #fee0dc;
-          color: #e81716; }
-        section.notifications .cp-notification .cp-notification-content .cp-notification-type.warning {
-          background-color: #dff7fa;
-          color: #00bcd6; }
-        section.notifications .cp-notification .cp-notification-content .cp-notification-type.success {
-          background-color: #f1f9e9;
-          color: #89c440; }
-      section.notifications .cp-notification .cp-notification-content .cp-notification-text {
-        padding: 6px 0;
-        font-size: .9em; }
-        section.notifications .cp-notification .cp-notification-content .cp-notification-text .meta {
-          font-size: .8em;
-          color: #999; }
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: .8em;
+      padding: 10px 20px 20px; }
+      section.notifications .notifications-wrapper .all-notifications:hover {
+        background-color: #f5f5f5; }
+    section.notifications .notifications-wrapper [data-role=notifications-container] {
+      padding: 30px 20px 0 0; }
+
+.cp-notification {
+  position: relative;
+  padding-left: 35px;
+  min-height: 50px; }
+  .cp-notification .cp-notification-state {
+    position: absolute;
+    left: 10px;
+    top: 0; }
+    .cp-notification .cp-notification-state.unread::before {
+      content: "\25CF";
+      color: #eaeaea;
+      font-size: 1.7em; }
+  .cp-notification.read .mark-as-read {
+    display: none; }
+  .cp-notification .cp-notification-content {
+    position: relative;
+    padding-left: 55px; }
+    .cp-notification .cp-notification-content .cp-notification-type {
+      position: absolute;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      background-color: #eee;
+      text-align: center; }
+      .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context {
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 32px;
+        font-size: 1.2em; }
+        .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context.document:before {
+          content: "\e910"; }
+        .cp-notification .cp-notification-content .cp-notification-type .cp-notification-context.user:before {
+          content: "\e906"; }
+      .cp-notification .cp-notification-content .cp-notification-type.info {
+        background-color: #dff7fa;
+        color: #00bcd6; }
+      .cp-notification .cp-notification-content .cp-notification-type.danger {
+        background-color: #fee0dc;
+        color: #e81716; }
+      .cp-notification .cp-notification-content .cp-notification-type.warning {
+        background-color: #dff7fa;
+        color: #00bcd6; }
+      .cp-notification .cp-notification-content .cp-notification-type.success {
+        background-color: #f1f9e9;
+        color: #89c440; }
+    .cp-notification .cp-notification-content .cp-notification-text {
+      padding: 6px 0;
+      font-size: .9em; }
+      .cp-notification .cp-notification-content .cp-notification-text .meta {
+        font-size: .8em;
+        color: #999; }
 
 body.notificationsOn section.notifications {
   right: 0;
@@ -731,18 +802,34 @@ section.cp-overlay {
   border-bottom: 1px solid #eee;
   margin-bottom: 20px;
   padding-bottom: 20px; }
-  .notes-panel .notes-list > div > div .note-title {
-    font-weight: bold;
-    margin-bottom: 10px; }
-  .notes-panel .notes-list > div > div p {
-    color: #777; }
-  .notes-panel .notes-list > div > div .note-meta {
-    color: #bbb;
-    font-size: .8em; }
   .notes-panel .notes-list > div > div:last-child {
     padding-bottom: 0;
     margin-bottom: 0;
     border-bottom: none; }
+
+.notes-panel .notes-list .note {
+  position: relative; }
+  .notes-panel .notes-list .note .note-title {
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .notes-panel .notes-list .note p {
+    color: #777; }
+  .notes-panel .notes-list .note .note-meta {
+    color: #bbb;
+    font-size: .8em; }
+  .notes-panel .notes-list .note .note-actions {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 1.5em;
+    opacity: .5; }
+  .notes-panel .notes-list .note:hover {
+    cursor: pointer; }
+    .notes-panel .notes-list .note:hover .note-actions {
+      display: block; }
+      .notes-panel .notes-list .note:hover .note-actions:hover {
+        opacity: 1; }
 
 .notes-panel .note-create {
   text-align: right; }

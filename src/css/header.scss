@@ -18,14 +18,35 @@ header {
 				padding: 15px 18px;
 				color: $light-color;
 			}
-
 			
 			> li {
+				position: relative;
 
 				>a {
 					padding-top: 20px;
 					padding-bottom: 20px;
 					color: $light-color;
+				}
+
+				.counter {
+					position: absolute;
+			        display: none;
+			        background-color: red;
+			        font-size: .6em;
+			        width: 16px;
+			        height: 16px;
+			        text-align: center;
+			        line-height: 1.3em;
+			        color: #fff;
+			        border-radius: 100%;
+			        top: 13px;
+			        right: 8px;
+				}
+
+				&.warn {
+					.counter {
+						display: block;
+					}
 				}
 
 				&:hover {

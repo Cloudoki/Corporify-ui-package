@@ -10,6 +10,7 @@ html{
 		background-color: #f1f1f1;
 		color: #333;
 		position: relative;
+		overflow: hidden;
 	}
 }
 
@@ -81,14 +82,14 @@ img {
 
 .context-menu {
 	position: absolute;
-	background-color: #fff;
-	top: 0;
-	left: 0px;
-	height: 100%;
-	font-size: .9em;
-	border-right: 1px solid $grey;
-	-webkit-transition: left .25s;
-	transition: left .25s;
+  	background-color: #fff;
+  	top: 0;
+  	left: 0px;
+  	height: 100%;
+  	font-size: .9em;
+  	border-right: 1px solid #bcbbc6;
+  	-webkit-transition: left .25s;
+  	transition: left .25s; 
 
 	.inside-menu {
 		height: 100%;
@@ -99,27 +100,38 @@ img {
 		width: 560px;
 	 	left: -280px;
 	 	z-index: 95;
+	 	border-right: none;
 
 	 	.left-menu {
 	 		position: absolute;
-	 		top: 0;
-	 		width: 50%;
-	 		left: 0;
-	 		height: 100%;
-    		overflow-y: auto;
+	      	background-color: #fff;
+	      	top: 0;
+	      	width: 50%;
+	      	left: 0;
+	      	height: 100%;
+	      	overflow-y: auto;
+	      	z-index: 10;
 	 	}
 
 	 	.right-menu {
 	 		position: absolute;
-	 		top: 0;
-	 		width: 50%;
-	 		left: 50%;
-			height: 100%;
-    		overflow-y: auto;
+	      	background-color: #fff;
+	      	top: 0;
+	      	width: 50%;
+	      	left: 50%;
+	      	height: 100%;
+	      	overflow-y: auto;
+	      	border-right: 1px solid #bcbbc6;
+	      	transition: left .25s;
 	 	}
 
 	 	&.toggle {
 	 		left: 0;
+	 		&.semi-toggle {
+	 			.right-menu {
+	 				left: 0%;
+	 			}
+	 		}
 	 	}
 	}
 }

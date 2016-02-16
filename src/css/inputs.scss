@@ -24,9 +24,7 @@ textarea {
 	color: #666;
 }
 
-.input-group {
-	width: 100%;
-	
+.input-group {	
 	&.iconed {
 		position: relative;
 
@@ -58,11 +56,19 @@ textarea {
     	height: 34px;
     	font-size: .9em;
     	line-height: 18px;
-    	color: #999;
+    	color: #555;
 
     	> div > b {
     		background-position-y: 5px;
     	}
+
+    	span {
+    		margin-right: 18px;
+    	}
+	}
+
+	> .chosen-default {
+		color: #aaa;
 	}
 
 	&.chosen-container-active {
@@ -89,7 +95,7 @@ textarea {
 		max-width: 100px;
 		margin-left: 10px;
 		float: left !important;
-		color: #999;
+		color: #555;
 	}
 
 	span {

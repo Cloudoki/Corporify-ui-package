@@ -25,25 +25,25 @@
 		}
 
 		.cp-actions {
+			margin-top: -5px;
+      		margin-bottom: -10px;
 
 			.input-group {
 				max-width: 150px;
 				display: inline-block;
-
-				max-width: 150px;
-				margin-left: 10px;
-
-				&:first-child {
-					margin-left: 0;
-				}
+				margin: 4px 5px;
 			}
 		}
 
 		.cp-btn	{
-			margin: -10px 0;
 			line-height: 1em;
+
 			span {
 				font-size: 1.3em;
+			}
+
+			&.no-margin {
+				margin: -10px 0
 			}
 		}
 	}
@@ -87,6 +87,11 @@
 							padding: 6px 5px;
 							border-bottom: 1px solid #eee;
 
+							&.clickable:hover {
+								cursor: pointer;
+            					text-decoration: underline;
+							}
+
 							&:first-child {
 								padding-left: 30px;
 							}
@@ -94,6 +99,14 @@
 							&:last-child {
 								padding-right: 30px;
 							}
+						}
+
+						&.inactive {
+							> td {
+								background-color: #f9f9f9;
+          						color: #ccc;
+							}
+
 						}
 
 						&:last-child {

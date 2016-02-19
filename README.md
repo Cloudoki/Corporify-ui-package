@@ -17,7 +17,7 @@ Style UI package for corporify
 - [npm](https://www.npmjs.com/)
 
 ## Install
-Install the dependencies with `npm install` or `sudo npm install`. Then just run `gulp`.
+Install the dependencies with `npm install` or `sudo npm install`. Then just run `bower install` and `gulp`. If you don't have bower or gulp run `npm install --global bower`, `npm install --global gulp-cli` and `npm install --save-dev gulp` before.
 
 ## Modular approach
 This UI boilerplate is based on atomic design methodology. The components are divided into **Atoms**, **Molecules**, **Organisms** & **Pages**, thus, using a modular development approach. More information on each component is found on their respective folders. There is also a **global** folder containing header & footer placeholders for your head & footer code, that will automatically be included on each page. More information on this design patter can be found [here](http://patternlab.io/about.html).

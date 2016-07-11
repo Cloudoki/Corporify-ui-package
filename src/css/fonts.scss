@@ -24,12 +24,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-building-o:before {
-    content: "\f0f7";
-}
-.icon-android-add-circle:before {
-    content: "\e915";
-}
 .icon-android-arrow-dropdown:before {
     content: "\e90e";
 }
@@ -38,9 +32,6 @@
 }
 .icon-android-document:before {
     content: "\e910";
-}
-.icon-android-remove-circle:before {
-    content: "\e916";
 }
 .icon-chevron-down:before {
     content: "\e909";
@@ -72,9 +63,6 @@
 .icon-ios-compose:before {
     content: "\e904";
 }
-.icon-ios-email:before {
-    content: "\e917";
-}
 .icon-ios-folder-outline:before {
     content: "\e911";
 }
@@ -99,12 +87,10 @@
 .icon-search:before {
     content: "\e900";
 }
-.icon-social-github:before {
-    content: "\e918";
+.icon-building-o:before {
+    content: "\f0f7";
 }
-.icon-social-skype:before {
-    content: "\e919";
+.icon-stack:before {
+    content: "\e92e";
 }
-.icon-social-twitter:before {
-    content: "\e91a";
-}
+
